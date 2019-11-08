@@ -1,0 +1,6 @@
+*.log
+build/
+node_modules/
+source/projects/
+npm-debug.*
+Thumbs.db
