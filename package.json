@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build",
-    "start": "gulp start",
+    "start": "gulp start"
+  },
   "dependencies": {
     "autoprefixer": "^9.7.1",
     "browser-sync": "^2.26.7",
@@ -21,19 +22,5 @@
     "gulp-uglify": "^3.0.2",
     "node-normalize-scss": "^8.0.1",
     "uninstall": "^0.0.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/schegol/junior-developer-test-1.1.git"
-  },
-  "author": "aurori-align",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/schegol/junior-developer-test-1.1/issues"
-  },
-  "homepage": "https://github.com/schegol/junior-developer-test-1.1#readme"
+  }
 }
