@@ -7,18 +7,21 @@
 
 @media (min-width: $s-width) {
   .container {
-    width: 520px;
+    width: 768px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
 @media (min-width: $m-width) {
   .container {
-    width: 836px;
+    width: 1012px;
+    padding: 0;
   }
 }
 
 @media (min-width: $l-width) {
   .container {
-    width: 1160px;
+    width: 1280px;
   }
 }

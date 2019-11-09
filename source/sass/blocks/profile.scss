@@ -1,0 +1,46 @@
+.profile {
+  display: none;
+}
+
+@media (min-width: $s-width) {
+  .profile {
+    display: block;
+  }
+
+  .profile__text {
+    position: relative;
+
+    display: inline-block;
+    width: 109px;
+
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 22px;
+    color: $main-color;
+
+    &::after {
+      content: ".......................";
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+
+      width: auto;
+      height: 1px;
+
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 19px;
+      letter-spacing: 0.205em;
+
+      color: #337FD2;
+    }
+  }
+
+  .profile__link {
+    @include d-flex(nowrap, row, flex-start, center);
+  }
+
+  .profile__text {
+    margin-left: 15px;
+  }
+}

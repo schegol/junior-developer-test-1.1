@@ -1,0 +1,34 @@
+.shop-contacts {
+  display: none;
+}
+
+@media (min-width: $m-width) {
+  .shop-contacts {
+    @include d-flex(nowrap, row, flex-start, stretch);
+  }
+
+  .shop-contacts__element {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    &:first-child {
+      margin-right: 25px;
+    }
+  }
+
+  .shop-contacts__title {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: $l-width) {
+  .shop-contacts__element {
+    font-size: 13px;
+    line-height: 17px;
+
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+}

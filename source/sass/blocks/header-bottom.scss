@@ -1,0 +1,5 @@
+@media (min-width: $s-width) {
+  .header-bottom {
+    @include d-flex(nowrap, row, flex-start, center);
+  }
+}

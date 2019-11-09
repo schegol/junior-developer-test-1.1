@@ -1,0 +1,13 @@
+.other-navigation {
+  @include d-flex(nowrap, row, space-between, center);
+}
+
+@media (min-width: $s-width) {
+  .other-navigation__finances {
+    order: 1;
+  }
+
+  .other-navigation__header-search {
+    order: 0;
+  }
+}

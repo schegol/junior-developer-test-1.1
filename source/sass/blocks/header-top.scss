@@ -1,0 +1,9 @@
+.header-top {
+  display: none;
+}
+
+@media (min-width: $s-width) {
+  .header-top {
+    @include d-flex(nowrap, row, space-between, center);
+  }
+}

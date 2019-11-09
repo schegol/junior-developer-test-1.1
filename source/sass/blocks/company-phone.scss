@@ -1,0 +1,124 @@
+.company-phone {
+  &--top-bar {
+    display: none;
+  }
+}
+
+.company-phone__icon {
+  display: none;
+}
+
+.company-phone__number {
+  font-size: 15px;
+  line-height: 25px;
+  color: #3b3b3b;
+}
+
+.company-phone__call-order {
+  display: none;
+}
+
+@media (min-width: $s-width) {
+  .company-phone {
+    &--top-bar {
+      position: relative;
+
+      display: block;
+      padding-left: 27px;
+
+      &::before {
+        @include abs-pseudo;
+
+        top: 22px;
+        left: 0;
+
+        width: 16px;
+        height: 20px;
+
+        background-image: url("../img/icon-phone.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+
+    &--bottom-bar {
+      display: none;
+    }
+  }
+
+  .company-phone__icon {
+    display: block;
+  }
+}
+
+@media (min-width: $m-width) {
+  .company-phone {
+    &--top-bar {
+      display: none;
+    }
+
+    &--bottom-bar {
+      position: relative;
+
+      display: block;
+      padding-left: 30px;
+
+      &::before {
+        @include abs-pseudo;
+
+        top: 25px;
+        left: 0;
+
+        width: 18px;
+        height: 28px;
+
+        background-image: url("../img/icon-phone.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .company-phone__text-data {
+    @include d-flex(nowrap, column, flex-start, flex-start);
+  }
+
+  .company-phone__call-order {
+    position: relative;
+
+    display: inline-block;
+    width: 109px;
+
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 22px;
+    color: $main-color;
+
+    &::after {
+      content: ".......................";
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+
+      width: auto;
+      height: 1px;
+
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 19px;
+      letter-spacing: 0.205em;
+
+      color: #337FD2;
+    }
+  }
+}
+
+@media (min-width: $l-width) {
+  .company-phone {
+    &--bottom-bar {
+      padding-left: 34px;
+    }
+  }
+}

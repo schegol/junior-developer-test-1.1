@@ -1,0 +1,101 @@
+.finances {
+  @include d-flex(nowrap, row, flex-start, center);
+}
+
+.finances__cart-link {
+  @include d-flex(nowrap, row, flex-start, center);
+}
+
+.finances__cart-icon {
+  margin-right: 15px;
+
+  &--other {
+    display: none;
+  }
+}
+
+.finances__counter {
+  position: relative;
+
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin-right: 15px;
+
+  background-color: $extra-color;
+  border-radius: 50%;
+}
+
+.finances__counter-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: inline-block;
+
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 17px;
+  color: #fff;
+
+  transform: translate(-50%, -50%);
+
+  &--other {
+    display: none;
+  }
+}
+
+.finances__balance {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #3b3b3b;
+}
+
+.finances__balance-value {
+  &--other {
+    display: none;
+  }
+}
+
+@media (min-width: $s-width) {
+  .finances__cart-icon {
+    &--other {
+      display: block;
+      margin-right: 10px;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .finances__counter {
+    width: 29px;
+    height: 29px;
+    margin-right: 10px;
+  }
+
+  .finances__counter-value {
+    font-size: 14px;
+    line-height: 18px;
+
+    &--other {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .finances__balance-value {
+    &--other {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}

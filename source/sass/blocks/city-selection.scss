@@ -1,0 +1,49 @@
+.city-selection {
+  @include d-flex(nowrap, row, flex-start, stretch);
+
+  position: relative;
+
+  width: 190px;
+  padding-left: 26px;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 17px;
+
+  &::before {
+    @include abs-pseudo;
+
+    top: 0;
+    left: 0;
+
+    width: 16px;
+    height: 20px;
+
+    background-image: url("../img/icon-pin.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.city-selection__title {
+  margin-right: 5px;
+}
+
+.city-selection__select-input {
+  width: 60px;
+
+  border: none;
+
+  appearance: none;
+}
+
+@media (min-width: $m-width) {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media (min-width: $m-width) {
+  font-size: 13px;
+  line-height: 17px;
+}

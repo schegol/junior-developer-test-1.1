@@ -1,0 +1,40 @@
+.company-info {
+  @include d-flex(nowrap, row, space-between, center);
+
+  padding-right: 15px;
+
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.company-info__slogan {
+  display: none;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 17px;
+  color: #3B3B3B;
+}
+
+@media (min-width: $s-width) {
+  .company-info {
+    justify-content: flex-start;
+    margin-right: 30px;
+    padding-right: 0;
+
+    border-bottom: none;
+  }
+
+  .company-info__logo {
+    margin-right: 15px;
+  }
+
+  .company-info__slogan {
+    display: inline-block;
+
+    max-width: 110px;
+  }
+}
+
+@media (min-width: $m-width) {
+
+}
