@@ -6,6 +6,7 @@
   .header-top {
     @include d-flex(nowrap, row, flex-start, center);
 
+    height: 40px;
     min-height: 45px;
   }
 }

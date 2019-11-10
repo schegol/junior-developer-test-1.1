@@ -2,6 +2,7 @@
   .header-bottom {
     @include d-flex(nowrap, row, flex-start, center);
 
+    height: 90px;
     min-height: 91px;
   }
 
