@@ -131,3 +131,120 @@
     z-index: 4;
   }
 }
+
+@media (min-width: $s-width) {
+  .products-menu {
+    display: none;
+  }
+}
+
+@media (min-width: $m-width) {
+  .products-menu {
+    position: relative;
+
+    display: block;
+  }
+
+  .products-menu__common-link {
+    @include d-flex(nowrap, column, center, flex-start);
+
+    position: relative;
+
+    width: 171px;
+    height: 100%;
+    padding-left: 48px;
+
+    font-size: 13px;
+    line-height: 17px;
+    color: #fff;
+
+    background-color: $main-color;
+
+    &::before {
+      @include abs-pseudo;
+
+      top: 17px;
+      left: 15px;
+
+      width: 18px;
+      height: 17px;
+
+      background-color: transparent;
+      background-image: url("../img/icon-burger.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #0b6edb;
+    }
+  }
+
+  .products-menu__heading-wrapper,
+  .products-menu__list {
+    display: none;
+  }
+
+  .products-menu:hover .products-menu__list,
+  .products-menu:focus-within .products-menu__list,
+  .products-menu__common-link:hover + .products-menu__list,
+  .products-menu__common-link:focus + .products-menu__list {
+    @include list-reset;
+    @include d-flex(nowrap, column, center, flex-start);
+
+    position: absolute;
+    top: 49px;
+    left: 0;
+
+    width: 280px;
+    height: auto;
+
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .products-menu__link {
+    background-color: #f9f9f9;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+
+      background-color: #fff;
+    }
+  }
+
+  .products-menu__category:hover .products-menu__submenu-wrapper,
+  .products-menu__category:focus-within .products-menu__submenu-wrapper,
+  .products-menu__list--sub:hover,
+  .products-menu__list--sub:focus-within {
+    @include d-flex(nowrap, column, center, flex-start);
+
+    position: absolute;
+    top: -49px;
+    left: 280px;
+
+    width: 280px;
+    height: auto;
+
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+
+    z-index: 4;
+  }
+}
+
+@media (min-width: $l-width) {
+  .products-menu__common-link {
+    width: 207px;
+    padding-left: 58px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    &::before {
+      left: 20px;
+    }
+  }
+}

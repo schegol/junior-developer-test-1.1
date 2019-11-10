@@ -1,3 +1,13 @@
-.site-menu {
-  display: none;
+@media (min-width: $s-width) {
+  .site-links {
+    background-color: #313d50;
+  }
+}
+
+@media (min-width: $m-width) {
+  .site-links__wrapper {
+    @include d-flex(nowrap, row, flex-start, stretch);
+
+    min-height: 49px;
+  }
 }

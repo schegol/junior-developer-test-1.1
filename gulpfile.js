@@ -63,7 +63,8 @@ gulp.task("html", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/img/*.svg"
+    "source/img/*.svg",
+    "source/js/*.js"
   ], {
     base: "source"
   })

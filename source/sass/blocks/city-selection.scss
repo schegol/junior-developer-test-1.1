@@ -42,6 +42,10 @@
     appearance: none;
     cursor: pointer;
     overflow: hidden;
+
+    &::-ms-expand {
+        display: none;
+    }
   }
 }
 
