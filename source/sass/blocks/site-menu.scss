@@ -71,7 +71,29 @@
   .site-menu__item:hover .site-menu__submenu,
   .site-menu__item:focus-within .site-menu__submenu,
   .site-menu__submenu:hover,
-  .site-menu__submenu:focus-within {
+  .site-menu__submenu:focus-within,
+  .site-menu__link:hover + .site-menu__submenu,
+  .site-menu__link:focus + .site-menu__submenu {
+    @include list-reset;
+    @include d-flex(nowrap, column, center, flex-start);
+
+    position: absolute;
+    top: 49px;
+    left: 0;
+
+    width: 280px;
+    height: auto;
+
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .site-menu__item:hover .site-menu__submenu,
+  .site-menu__item[focus-within] .site-menu__submenu,
+  .site-menu__submenu:hover,
+  .site-menu__submenu[focus-within],
+  .site-menu__link:hover + .site-menu__submenu,
+  .site-menu__link:focus + .site-menu__submenu {
     @include list-reset;
     @include d-flex(nowrap, column, center, flex-start);
 
@@ -124,6 +146,14 @@
   .site-menu__item:focus-within .site-menu__submenu--more-list,
   .site-menu__submenu--more-list:hover,
   .site-menu__submenu--more-list:focus-within {
+    right: 0;
+    left: auto;
+  }
+
+  .site-menu__item:hover .site-menu__submenu--more-list,
+  .site-menu__item[focus-within] .site-menu__submenu--more-list,
+  .site-menu__submenu--more-list:hover,
+  .site-menu__submenu--more-list[focus-within] {
     right: 0;
     left: auto;
   }
