@@ -4,6 +4,24 @@
 
 @media (min-width: $s-width) {
   .header-top {
-    @include d-flex(nowrap, row, space-between, center);
+    @include d-flex(nowrap, row, flex-start, center);
+
+    min-height: 45px;
+  }
+}
+
+@media (min-width: $m-width) {
+  .header-top__shop-contacts {
+    margin-right: 48px;
+  }
+}
+
+@media (min-width: $l-width) {
+  .header-top {
+    min-height: 43px;
+  }
+
+  .header-top__shop-contacts {
+    margin-right: 117px;
   }
 }

@@ -1,5 +1,30 @@
 @media (min-width: $s-width) {
   .header-bottom {
     @include d-flex(nowrap, row, flex-start, center);
+
+    min-height: 91px;
+  }
+
+  .header-bottom__company-info {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: $m-width) {
+  .header-bottom {
+    @include d-flex(nowrap, row, flex-start, center);
+
+    min-height: 102px;
+  }
+
+  .header-bottom__company-info {
+    margin-right: 36px;
+  }
+}
+
+@media (min-width: $l-width) {
+  .header-bottom__company-info {
+    margin-right: 68px;
+    padding-left: 6px;
   }
 }

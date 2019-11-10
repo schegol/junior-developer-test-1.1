@@ -7,7 +7,7 @@
 }
 
 .finances__cart-icon {
-  margin-right: 15px;
+  margin-right: 13px;
 
   &--other {
     display: none;
@@ -15,12 +15,14 @@
 }
 
 .finances__counter {
+  @include reset;
+
   position: relative;
 
   display: block;
   width: 26px;
   height: 26px;
-  margin-right: 15px;
+  margin-right: 13px;
 
   background-color: $extra-color;
   border-radius: 50%;
@@ -46,6 +48,8 @@
 }
 
 .finances__balance {
+  @include reset;
+
   font-size: 14px;
   line-height: 18px;
 
@@ -97,5 +101,11 @@
     &--mobile {
       display: none;
     }
+  }
+}
+
+@media (min-width: $l-width) {
+  .finances__cart-link {
+    margin-right: 5px;
   }
 }

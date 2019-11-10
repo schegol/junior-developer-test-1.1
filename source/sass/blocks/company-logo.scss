@@ -1,4 +1,6 @@
 .company-logo {
+  @include reset;
+
   font-family: "Secular One", "Arial", sans-serif;
   font-weight: normal;
   font-size: 24px;
@@ -8,6 +10,8 @@
 
 @media (min-width: $s-width) {
   .company-logo {
+    margin: auto;
+
     font-size: 29px;
     line-height: 42px;
   }
@@ -15,6 +19,8 @@
 
 @media (min-width: $m-width) {
   .company-logo {
+    margin: 0;
+    
     font-size: 34px;
     line-height: 49px;
   }

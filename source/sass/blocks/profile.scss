@@ -9,9 +9,11 @@
 
   .profile__text {
     position: relative;
+    top: -1px;
 
     display: inline-block;
     width: 109px;
+    margin-left: 11px;
 
     font-weight: bold;
     font-size: 13px;
@@ -39,8 +41,10 @@
   .profile__link {
     @include d-flex(nowrap, row, flex-start, center);
   }
+}
 
-  .profile__text {
-    margin-left: 15px;
+@media (min-width: $l-width) {
+  .profile__icon {
+    margin-right: 4px;
   }
 }

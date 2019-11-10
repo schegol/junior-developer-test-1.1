@@ -1,5 +1,7 @@
 .other-navigation {
   @include d-flex(nowrap, row, space-between, center);
+
+  min-height: 44px;
 }
 
 @media (min-width: $s-width) {
@@ -9,5 +11,18 @@
 
   .other-navigation__header-search {
     order: 0;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: $m-width) {
+  .other-navigation__header-search {
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: $l-width) {
+  .other-navigation__header-search {
+    margin-right: 55px;
   }
 }

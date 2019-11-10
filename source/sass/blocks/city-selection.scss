@@ -1,49 +1,100 @@
-.city-selection {
-  @include d-flex(nowrap, row, flex-start, stretch);
+@media (min-width: $s-width) {
+  .city-selection {
+    @include d-flex(nowrap, row, flex-start, stretch);
 
-  position: relative;
+    position: relative;
 
-  width: 190px;
-  padding-left: 26px;
+    width: 278px;
+    padding-left: 20px;
 
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 17px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
 
-  &::before {
-    @include abs-pseudo;
+    &::before {
+      @include abs-pseudo;
 
-    top: 0;
-    left: 0;
+      top: 0;
+      left: -5px;
 
-    width: 16px;
-    height: 20px;
+      width: 16px;
+      height: 20px;
 
-    background-image: url("../img/icon-pin.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+      background-image: url("../img/icon-pin.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .city-selection__title {
+    margin-right: 5px;
+  }
+
+  .city-selection__select-input {
+    width: 160px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    border: none;
+
+    appearance: none;
+    cursor: pointer;
+    overflow: hidden;
   }
 }
 
-.city-selection__title {
-  margin-right: 5px;
-}
-
-.city-selection__select-input {
-  width: 60px;
-
-  border: none;
-
-  appearance: none;
-}
-
 @media (min-width: $m-width) {
-  font-size: 12px;
-  line-height: 16px;
+  .city-selection {
+    width: 180px;
+    margin-right: 27px;
+    padding-left: 27px;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    &::before {
+      top: -1px;
+      left: 5px;
+    }
+  }
+
+  .city-selection__title {
+    margin-right: 3px;
+  }
+
+  .city-selection__select-input {
+    width: 80px;
+
+    background-color: transparent;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+  }
+
+  .city-selection__form {
+    position: relative;
+  }
 }
 
-@media (min-width: $m-width) {
-  font-size: 13px;
-  line-height: 17px;
+@media (min-width: $l-width) {
+  .city-selection {
+    width: 200px;
+    margin-right: 104px;
+    padding-left: 36px;
+
+    font-size: 13px;
+    line-height: 17px;
+
+    &::before {
+      left: 10px;
+    }
+  }
+
+  .city-selection__select-input {
+    width: 80px;
+
+    background-position: right 14px bottom 2px;
+  }
 }

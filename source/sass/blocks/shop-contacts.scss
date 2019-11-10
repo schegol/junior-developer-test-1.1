@@ -13,22 +13,27 @@
     line-height: 16px;
 
     &:first-child {
-      margin-right: 25px;
+      margin-right: 18px;
     }
   }
 
   .shop-contacts__title {
+    margin-right: 2px;
+
     font-weight: bold;
   }
 }
 
 @media (min-width: $l-width) {
   .shop-contacts__element {
+    margin-top: 0;
+    margin-bottom: 0;
+
     font-size: 13px;
     line-height: 17px;
 
     &:first-child {
-      margin-right: 40px;
+      margin-right: 43px;
     }
   }
 }
