@@ -41,6 +41,29 @@
   .profile__link {
     @include d-flex(nowrap, row, flex-start, center);
   }
+
+  .profile__link:hover,
+  .profile__link:focus {
+    outline: none;
+  }
+
+  .profile__link:hover .profile__text,
+  .profile__link:focus .profile__text {
+    color: lighten($main-color, 10%);
+  }
+
+  .profile__link:active .profile__text {
+    color: darken($main-color, 5%);
+  }
+
+  .profile__link:hover .profile__icon-path,
+  .profile__link:focus .profile__icon-path {
+    fill: lighten($main-color, 10%);
+  }
+
+  .profile__link:active .profile__icon-path {
+    fill: darken($main-color, 5%);
+  }
 }
 
 @media (min-width: $l-width) {

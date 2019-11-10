@@ -102,6 +102,29 @@
       display: none;
     }
   }
+
+  .finances__cart-link:hover,
+  .finances__cart-link:focus {
+    outline: none;
+  }
+
+  .finances__cart-link:hover .finances__icon-path,
+  .finances__cart-link:focus .finances__icon-path {
+    fill: $main-color;
+  }
+
+  .finances__cart-link:active .finances__icon-path {
+    fill: darken($main-color, 5%);
+  }
+
+  .finances__cart-link:hover .finances__counter,
+  .finances__cart-link:focus .finances__counter {
+    background-color: lighten($extra-color, 10%);
+  }
+
+  .finances__cart-link:active .finances__counter {
+    background-color: darken($extra-color, 5%);
+  }
 }
 
 @media (min-width: $l-width) {
