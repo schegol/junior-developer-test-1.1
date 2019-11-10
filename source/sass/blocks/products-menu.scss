@@ -1,3 +1,133 @@
 .products-menu {
   display: none;
+
+  &--mobile-open {
+    @include d-flex(nowrap, column, flex-start, stretch);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: auto;
+
+    background-color: #fff;
+
+    z-index: 3;
+  }
+}
+
+.products-menu__common-link {
+  display: none;
+}
+
+.products-menu__list {
+  @include list-reset;
+}
+
+.products-menu__heading-wrapper {
+  @include d-flex(nowrap, column, center, flex-start);
+
+  position: relative;
+
+  width: 100%;
+  min-height: 48px;
+  padding-left: 61px;
+
+  background-color: $main-color;
+}
+
+.products-menu__heading-button {
+  position: absolute;
+
+  top: 16px;
+  left: 18px;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: transparent;
+  background-image: url("../img/icon-cross.svg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: none;
+
+  cursor: pointer;
+
+  &--sub {
+    background-image: url("../img/icon-back.svg");
+  }
+}
+
+.products-menu__heading {
+  @include reset;
+
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+}
+
+.products-menu__category {
+  @include d-flex(nowrap, column, stretch, stretch);
+
+  position: relative;
+
+  width: 100%;
+  min-height: 50px;
+
+  border-bottom: 1px solid #dedede;
+}
+
+.products-menu__link {
+  @include d-flex(nowrap, column, center, flex-start);
+
+  flex-grow: 1;
+  width: 100%;
+  min-height: 100%;
+  padding-left: 12px;
+
+  color: #39393a;
+
+  &--parent,
+  &--subparent {
+    &::after {
+      @include abs-pseudo;
+
+      top: 20px;
+      right: 12px;
+
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      background-color: transparent;
+      border-top: 1px solid #3c3d3c;
+      border-right: 1px solid #3c3d3c;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.products-menu__submenu-wrapper {
+  display: none;
+
+  &--mobile-open {
+    @include d-flex(nowrap, column, flex-start, stretch);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: auto;
+
+    background-color: #fff;
+
+    z-index: 4;
+  }
 }
