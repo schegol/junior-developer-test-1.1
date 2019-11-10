@@ -1,5 +1,7 @@
 .header-search__label {
   position: relative;
+
+  display: block;
 }
 
 .header-search__icon {
@@ -19,7 +21,7 @@
 .header-search__input {
   position: absolute;
   left: calc(-100vw + 55px);;
-  top: 17px;
+  top: 3px;
 
   display: none;
   width: calc(100vw - 15px);
@@ -33,6 +35,10 @@
   border: 1px solid #d6d6d6;
   border-radius: 43px;
   box-shadow: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .header-search__input--mobile-open {
@@ -93,18 +99,13 @@
 
   .header-search__icon-box {
     position: absolute;
-    top: 25px;
-    right: -257px;
+    top: 11px;
+    right: 3px;
   }
 }
 
 @media (min-width: $l-width) {
   .header-search__input {
     width: 430px;
-  }
-
-  .header-search__icon-box {
-    top: 25px;
-    right: -427px;
   }
 }

@@ -109,6 +109,10 @@
       transform: rotate(45deg);
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .products-menu__submenu-wrapper {
